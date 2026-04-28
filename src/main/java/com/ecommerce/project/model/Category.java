@@ -2,11 +2,11 @@ package com.ecommerce.project.model;
 
 public class Category {
 
-    private long categoryId;
+    private Long categoryId;
     private String categoryName;
 
 
-    public Category(String categoryName, long categoryId) {
+    public Category(String categoryName, Long categoryId) {
         this.categoryName = categoryName;
         this.categoryId = categoryId;
     }
@@ -20,11 +20,11 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public long getCategoryId() {
+    public Long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
     }
 
