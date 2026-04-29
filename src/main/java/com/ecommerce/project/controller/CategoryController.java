@@ -19,13 +19,15 @@ public class CategoryController {
     private CategoryService categoryService;
 
 
-    @GetMapping("/api/public/categories")
+//    @GetMapping("/api/public/categories")
+    @RequestMapping(value = "/api/public/categories", method = RequestMethod.GET)
     public ResponseEntity<List<Category>> getAllCategories(){
         List<Category> categories = categoryService.getAllCategories();
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
-    @PostMapping("/api/public/categories")
+//      @PostMapping("/api/public/categories")
+    @RequestMapping(value = "/api/public/categories", method = RequestMethod.POST)
     public ResponseEntity<String> createCategory(@RequestBody Category category){
         categoryService.createCategory(category);
         return new ResponseEntity<>("Category created", HttpStatus.CREATED);
